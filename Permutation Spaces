@@ -1,0 +1,17 @@
+
+def Solve(inp, out):
+    if len(inp) == 0:
+        print(out)
+        return
+    out1 = out
+    out2 = out
+    out1 += "_" + inp[0]
+    out2 += inp[0]
+    inp=inp[1:]
+    Solve(inp, out1)
+    Solve(inp, out2)
+
+s=input("Enter String: ").strip()
+inp=s
+out=''
+Solve(inp,out)
